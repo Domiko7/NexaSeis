@@ -1,24 +1,11 @@
 import numpy as np
 
-import asyncio
-import logging
-from concurrent.futures import ThreadPoolExecutor
-from collections import defaultdict
-from datetime import datetime, timezone, timedelta
-import numpy as np
-
-from nexaseis.common import get_config, ws_queue, db_queue, datalink_queue, seedlink_queue
-
-BUFFER_TARGET_SIZE = 70
-SAMPLE_RATE = 100
-
-_CHANNEL_BUFFERS = defaultdict(lambda: {"start_time": None, "waveform": []})
-
 
 def process_packets(
     packet: dict, 
     time_array: list[float], 
-    sensitivity: float
+    sensitivity: float,
+    response: str = "m/s",
 ) -> dict:
     
     counts = np.asarray(packet["waveform"], dtype=float)
@@ -26,20 +13,38 @@ def process_packets(
 
     demeaned_counts = counts - np.mean(counts)
     
-    if not sensitivity:
-        velocity = demeaned_counts
+    calibrated = demeaned_counts if not sensitivity else demeaned_counts / sensitivity
+
+    def differentiate(values: np.ndarray) -> np.ndarray:
+        if len(values) < 2:
+            return np.zeros_like(values)
+        return np.gradient(values, time)
+
+    def integrate(values: np.ndarray) -> np.ndarray:
+        integrated = np.zeros_like(values)
+        if len(values) > 1:
+            intervals = np.diff(time)
+            areas = 0.5 * (values[1:] + values[:-1]) * intervals
+            integrated[1:] = np.cumsum(areas)
+        return integrated
+
+    if response == "m":
+        displacement = calibrated
+        velocity = differentiate(displacement)
+        acceleration = differentiate(velocity)
+    elif response == "m/s":
+        velocity = calibrated
+        acceleration = differentiate(velocity)
+        displacement = integrate(velocity)
+    elif response == "m/s**2":
+        acceleration = calibrated
+        velocity = integrate(acceleration)
+        displacement = integrate(velocity)
     else:
-        velocity = demeaned_counts / sensitivity
+        raise ValueError(f"Unsupported response unit: {response!r}")
 
     pgv = float(np.max(np.abs(velocity)))
-
-    acceleration = np.gradient(velocity, time)
     pga = float(np.max(np.abs(acceleration)))
-
-    displacement = np.zeros_like(velocity)
-    for i in range(1, len(velocity)):
-        displacement[i] = displacement[i - 1] + 0.5 * (velocity[i] + velocity[i - 1]) * (time[i] - time[i - 1])
-
     pgd = float(np.max(np.abs(displacement)))
 
     return {

@@ -10,7 +10,8 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 5408390926,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",
@@ -25,27 +26,33 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 85899345880,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s"
                 },
                 "EHE": {
                     "sensitivity": 85899345880,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s"
                 },
                 "EHN": {
                     "sensitivity": 85899345880,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s"
                 },
                 "ENZ": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s**2"
                 },
                 "ENE": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s**2"
                 },
                 "ENN": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250
+                    "sample_rate": 250,
+                    "response": "m/s**2"
                 }
             },
             "location": "01",
@@ -60,7 +67,8 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 5408390926,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",
@@ -75,7 +83,8 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 9200000000,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",
@@ -90,7 +99,8 @@
             "channels": {
                 "HHZ": {
                     "sensitivity": 1000000000,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",
@@ -105,7 +115,8 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 399650000,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",
@@ -120,7 +131,8 @@
             "channels": {
                 "EHZ": {
                     "sensitivity": 399650000,
-                    "sample_rate": 100
+                    "sample_rate": 100,
+                    "response": "m/s"
                 }
             },
             "location": "00",

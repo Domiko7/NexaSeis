@@ -59,9 +59,10 @@ async def _process_and_dispatch(packet: dict) -> None:
 
     time_array = [i / sample_rate for i in range(num_samples)]
     sensitivity = packet["station"].get("sensitivity") or 1.0
+    response = packet["station"].get("response") or "m/s"
 
     processed_packet = await asyncio.to_thread(
-        process_packets, packet, time_array, sensitivity
+        process_packets, packet, time_array, sensitivity, response
     )
 
     _dispatch_packet(processed_packet)
@@ -81,18 +82,22 @@ async def handle_station(packet: dict) -> None:
         if isinstance(channel_info, dict):
             sensitivity = channel_info.get("sensitivity")
             sample_rate = channel_info.get("sample_rate", DEFAULT_SAMPLE_RATE)
+            response = channel_info.get("response", "m/s")
         else:
             sensitivity = channel_info
             sample_rate = DEFAULT_SAMPLE_RATE
+            response = "m/s"
 
         packet["station"]["sensitivity"] = sensitivity
         packet["station"]["sample_rate"] = sample_rate
+        packet["station"]["response"] = response
         packet["station"]["name"] = matched_station.get("name", "")
         packet["station"]["lat"] = matched_station.get("lat", 0.0)
         packet["station"]["lon"] = matched_station.get("lon", 0.0)
     else:
         packet["station"]["sensitivity"] = None
         packet["station"]["sample_rate"] = DEFAULT_SAMPLE_RATE
+        packet["station"]["response"] = "m/s"
 
     sample_rate = packet["station"]["sample_rate"]
     channel_key = (net, code, loc, chan)
