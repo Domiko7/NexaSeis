@@ -1,0 +1,493 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.2">
+  <Source>scxml import</Source>
+  <Sender>AnyShake Project</Sender>
+  <Module/>
+  <ModuleURI/>
+  <Created>2026-02-11T17:22:53.766144Z</Created>
+  <Network code="Z9" startDate="2026-06-16T23:56:06Z">
+    <Station code="WAW" startDate="2026-06-16T23:56:06Z">
+      <Latitude>52.14414414414414</Latitude>
+      <Longitude>21.053007064521783</Longitude>
+      <Elevation>102</Elevation>
+      <Site>
+        <Name>Warsaw Station</Name>
+        <Country>Poland</Country>
+      </Site>
+      <CreationDate>2026-06-16T23:56:06Z</CreationDate>
+      <Channel code="EHZ" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-VEL">
+          <Model>LGT-4.5C</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-VEL"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>85899345880</Value>
+            <Frequency>4.5</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-VEL" resourceId="ResponsePAZ-E-C111G-VEL">
+              <InputUnits>
+                <Name>m/s</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>171.99852139050935</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">4.5</NormalizationFrequency>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="4">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>-2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="2">
+                <Real>-169.64600329384882</Real>
+                <Imaginary>0.0</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>100</Value>
+              <Frequency>4.5</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-VEL" resourceId="Datalogger-E-C111G-VEL">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>858993458.8</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+      <Channel code="EHE" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">90.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-VEL">
+          <Model>LGT-4.5C</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-VEL"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>85899345880</Value>
+            <Frequency>4.5</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-VEL" resourceId="ResponsePAZ-E-C111G-VEL">
+              <InputUnits>
+                <Name>m/s</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>171.99852139050935</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">4.5</NormalizationFrequency>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="4">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>-2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="2">
+                <Real>-169.64600329384882</Real>
+                <Imaginary>0.0</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>100</Value>
+              <Frequency>4.5</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-VEL" resourceId="Datalogger-E-C111G-VEL">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>858993458.8</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+      <Channel code="EHN" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-VEL">
+          <Model>LGT-4.5C</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-VEL"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>85899345880</Value>
+            <Frequency>4.5</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-VEL" resourceId="ResponsePAZ-E-C111G-VEL">
+              <InputUnits>
+                <Name>m/s</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>171.99852139050935</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">4.5</NormalizationFrequency>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="4">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-2.2211060060879837</Real>
+                <Imaginary>-2.221776881419294</Imaginary>
+              </Pole>
+              <Pole number="2">
+                <Real>-169.64600329384882</Real>
+                <Imaginary>0.0</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>100</Value>
+              <Frequency>4.5</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-VEL" resourceId="Datalogger-E-C111G-VEL">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>858993458.8</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+      <Channel code="ENZ" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-ACC">
+          <Model>LSM6DSR / LSM6DS3</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-ACC"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>1670.7030433430377</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-ACC" resourceId="ResponsePAZ-E-C111G-ACC">
+              <InputUnits>
+                <Name>m/s**2</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>DIGITAL (Z-TRANSFORM)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+            </PolesZeros>
+            <StageGain>
+              <Value>1670.7030433430377</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-ACC" resourceId="Datalogger-E-C111G-ACC">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+      <Channel code="ENE" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">90.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-ACC">
+          <Model>LSM6DSR / LSM6DS3</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-ACC"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>1670.7030433430377</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-ACC" resourceId="ResponsePAZ-E-C111G-ACC">
+              <InputUnits>
+                <Name>m/s**2</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>DIGITAL (Z-TRANSFORM)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+            </PolesZeros>
+            <StageGain>
+              <Value>1670.7030433430377</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-ACC" resourceId="Datalogger-E-C111G-ACC">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+      <Channel code="ENN" startDate="2026-06-16T23:56:06Z" restrictedStatus="open" locationCode="01">
+        <Latitude unit="DEGREES">52.144144</Latitude>
+        <Longitude unit="DEGREES">21.053007</Longitude>
+        <Elevation>105.000000</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <SampleRate unit="SAMPLES/S">250</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>250</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.0</ClockDrift>
+        <Sensor resourceId="Sensor-E-C111G-ACC">
+          <Model>LSM6DSR / LSM6DS3</Model>
+        </Sensor>
+        <DataLogger resourceId="Datalogger-E-C111G-ACC"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>1670.7030433430377</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="AS-E-C111G-ACC" resourceId="ResponsePAZ-E-C111G-ACC">
+              <InputUnits>
+                <Name>m/s**2</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>DIGITAL (Z-TRANSFORM)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+            </PolesZeros>
+            <StageGain>
+              <Value>1670.7030433430377</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients name="DL-E-C111G-ACC" resourceId="Datalogger-E-C111G-ACC">
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">250.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+  </Network>
+</FDSNStationXML>

@@ -1,0 +1,42 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1">
+  <Source>Github</Source>
+  <Sender>Dominik</Sender>
+  <Created>2026-06-16T23:56:06Z</Created>
+  <Network code="Z9" startDate="2026-06-16T23:56:06Z">
+    <Station code="WAW" startDate="2026-06-16T23:56:06Z">
+      <Latitude>52.14414414414414</Latitude>
+      <Longitude>21.053007064521783</Longitude>
+      <Elevation>102</Elevation>
+      <Site>
+        <Name>Warsaw Station</Name>
+        <Country>Poland</Country>
+      </Site>
+      <CreationDate>2026-06-16T23:56:06Z</CreationDate>
+      <Channel code="EHZ" locationCode="00" startDate="2026-06-16T23:56:06Z">
+        <Latitude>52.14414414414414</Latitude>
+        <Longitude>21.053007064521783</Longitude>
+        <Elevation>102</Elevation>
+        <Depth>0</Depth>
+        <Azimuth>0</Azimuth>
+        <Dip>-90</Dip>
+        <SampleRate>100</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>5408390926</Value>
+            <Frequency>4.5</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+  </Network>
+</FDSNStationXML>

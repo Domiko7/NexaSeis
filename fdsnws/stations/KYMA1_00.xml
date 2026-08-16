@@ -1,0 +1,42 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1">
+  <Source>Github</Source>
+  <Sender>Dominik</Sender>
+  <Created>2026-06-16T23:56:06Z</Created>
+  <Network code="Z9" startDate="2026-06-16T23:56:06Z">
+    <Station code="KYMA1" startDate="2026-06-16T23:56:06Z">
+      <Latitude>60.705063</Latitude>
+      <Longitude>26.847224</Longitude>
+      <Elevation>62</Elevation>
+      <Site>
+        <Name>Keta Services Seismic Station</Name>
+        <Country>Finland</Country>
+      </Site>
+      <CreationDate>2026-06-16T23:56:06Z</CreationDate>
+      <Channel code="EHZ" locationCode="00" startDate="2026-06-16T23:56:06Z">
+        <Latitude>60.705063</Latitude>
+        <Longitude>26.847224</Longitude>
+        <Elevation>62</Elevation>
+        <Depth>0</Depth>
+        <Azimuth>0</Azimuth>
+        <Dip>-90</Dip>
+        <SampleRate>100</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>5408390926</Value>
+            <Frequency>4.5</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+  </Network>
+</FDSNStationXML>

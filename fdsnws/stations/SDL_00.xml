@@ -1,0 +1,42 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.2">
+<Source>Github</Source>
+<Sender>Dominik</Sender>
+<Created>2025-05-16T18:14:34.988081Z</Created>
+<Network code="Z9" startDate="2026-06-16T23:56:06Z">
+<Station code="SDL" startDate="2026-06-16T23:56:06Z">
+<Latitude>52.15315</Latitude>
+<Longitude>22.244</Longitude>
+<Elevation>102</Elevation>
+<Site>
+<Name>Siedlce station</Name>
+<Country>Poland</Country>
+</Site>
+<CreationDate>2025-08-2T20:26:59Z</CreationDate>
+<Channel code="HHZ" startDate="2026-06-16T23:56:06Z" locationCode="00">
+<Latitude>52.163</Latitude>
+<Longitude>22.244</Longitude>
+<Elevation>102</Elevation>
+<Depth>0</Depth>
+<Azimuth>-90</Azimuth>
+<Dip>0</Dip>
+<SampleRate>100</SampleRate>
+<SampleRateRatio>
+<NumberSamples>100</NumberSamples>
+<NumberSeconds>1</NumberSeconds>
+</SampleRateRatio>
+<Response>
+<InstrumentSensitivity>
+<Value>1000000000</Value>
+<Frequency>0.15</Frequency>
+<InputUnits>
+<Name>m/s</Name>
+</InputUnits>
+<OutputUnits>
+  <Name>count</Name>
+</OutputUnits>
+</InstrumentSensitivity>
+</Response>
+</Channel>
+</Station>
+</Network>
+</FDSNStationXML>

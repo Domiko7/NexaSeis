@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexaseis"
+version = "0.1.0"
+description = "Acquisition and processing server for the NexaSeis collaborative seismic network"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Dominik Stempel" },
+]
+keywords = ["seismology", "seismograph", "seedlink", "miniseed", "esp32"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Framework :: FastAPI",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "fastapi[standard]",
+    "numpy",
+    "obspy",
+    "simpledali",
+    "simplemseed",
+    "uvicorn",
+    "websockets",
+]
+
+[project.urls]
+Homepage = "https://github.com/Domiko7/NexaSeis"
+Repository = "https://github.com/Domiko7/NexaSeis"
+Issues = "https://github.com/Domiko7/NexaSeis/issues"
+
+[project.scripts]
+nexaseis = "nexaseis.__main__:run"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/nexaseis" = ["src/config.json"]

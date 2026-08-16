@@ -1,0 +1,161 @@
+{
+    "organization": "Domiko labs",
+    "data_path": "/home/dominik/NexaSeis/src/data",
+    "debug": true,
+    "stations": [
+        {
+            "name": "Warsaw Station",
+            "code": "WAW",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 5408390926,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": 52.14414414414414,
+            "lon": 21.053007064521783,
+            "elevation": 102
+        },
+        {
+            "name": "Warsaw Station - E-C111G",
+            "code": "WAW",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 85899345880,
+                    "sample_rate": 250
+                },
+                "EHE": {
+                    "sensitivity": 85899345880,
+                    "sample_rate": 250
+                },
+                "EHN": {
+                    "sensitivity": 85899345880,
+                    "sample_rate": 250
+                },
+                "ENZ": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250
+                },
+                "ENE": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250
+                },
+                "ENN": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250
+                }
+            },
+            "location": "01",
+            "lat": 52.14414414414414,
+            "lon": 21.053007064521783,
+            "elevation": 102
+        },
+        {
+            "name": "Keta Services Seismic Station",
+            "code": "KYMA1",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 5408390926,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": 60.705924,
+            "lon": 26.844396,
+            "elevation": 62
+        },
+        {
+            "name": "Franca Station",
+            "code": "FRAN",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 9200000000,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": -20.5215,
+            "lon": -47.3968,
+            "elevation": 995
+        },
+        {
+            "name": "Siedlce Station",
+            "code": "SDL",
+            "network": "Z9",
+            "channels": {
+                "HHZ": {
+                    "sensitivity": 1000000000,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": 52.1676,
+            "lon": 22.2901,
+            "elevation": 100
+        },
+        {
+            "name": "Mrozy Station - RS1D",
+            "code": "MRZ",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 399650000,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": 52.15315,
+            "lon": 21.77792,
+            "elevation": 170
+        },
+        {
+            "name": "Guadalajara Station - RS1D",
+            "code": "GUAD",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 399650000,
+                    "sample_rate": 100
+                }
+            },
+            "location": "00",
+            "lat": 40.594594594594597,
+            "lon": -3.2390283266332474,
+            "elevation": 645
+        }
+    ],
+    "api": {
+        "enabled": true,
+        "address": "0.0.0.0:50010",
+        "cors": true
+    },
+    "ws_server": {
+        "enabled": true,
+        "address": "0.0.0.0:50007"
+    },
+    "seedlink_server": {
+        "enabled": false,
+        "address": "0.0.0.0:18000"
+    },
+    "datalink_server": {
+        "enabled": true,
+        "address": "127.0.0.1:16000",
+        "program_name": "NexaSeis",
+        "username": "Dominik",
+        "process_id": 0,
+        "architecture": "python"
+    },
+    "udp_listener": {
+        "enabled": true,
+        "address": "0.0.0.0:50006"
+    },
+    "tcp_listener": {
+        "enabled": false,
+        "address": "0.0.0.0:50005"
+    }
+}

@@ -1,0 +1,42 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1">
+<Source>Github</Source>
+<Sender>Dominik</Sender>
+<Created>2026-06-16T23:56:06Z</Created>
+<Network code="Z9" startDate="2026-06-16T23:56:06Z">
+<Station code="FRAN" startDate="2026-06-16T23:56:06Z">
+<Latitude>-20.5215</Latitude>
+<Longitude>-47.3968</Longitude>
+<Elevation>995</Elevation>
+<Site>
+<Name>Franca, Sao Paulo station</Name>
+<Country>Brazil</Country>
+</Site>
+<CreationDate>2026-06-16T23:56:06Z</CreationDate>
+<Channel code="EHZ" startDate="2026-06-16T23:56:06Z" locationCode="00">
+<Latitude>-20.5215</Latitude>
+<Longitude>-47.3968</Longitude>
+<Elevation>995</Elevation>
+<Depth>0</Depth>
+<Azimuth>0</Azimuth>
+<Dip>-90</Dip>
+<SampleRate>100</SampleRate>
+<SampleRateRatio>
+<NumberSamples>100</NumberSamples>
+<NumberSeconds>1</NumberSeconds>
+</SampleRateRatio>
+<Response>
+<InstrumentSensitivity>
+<Value>6184752906</Value>
+<Frequency>4.5</Frequency>
+<InputUnits>
+<Name>m/s</Name>
+</InputUnits>
+<OutputUnits>
+  <Name>count</Name>
+</OutputUnits>
+</InstrumentSensitivity>
+</Response>
+</Channel>
+</Station>
+</Network>
+</FDSNStationXML>

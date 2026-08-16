@@ -1,0 +1,29 @@
+#pragma once
+
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+#define CODE "YOUR_WIFI_CODE"
+#define NETWORK "YOUR_NETWORK_CODE"
+#define CHANNEL_Z "ENZ"
+#define CHANNEL_N "ENN"
+#define CHANNEL_E "ENE"
+#define LOCATION "YOUR_LOCATION_CODE"
+#define SERVER_IP "YOUR_SERVER_IP"
+#define SERVER_PORT 50006
+#define NTP_SERVER "time.google.com"
+#define TRANSMISSION_PROTOCOL "UDP" // can be either TCP or UDP
+
+#define SAMPLE_RATE 100
+#define SAMPLE_COUNT 5
+#define GAIN 64
+
+#define GAIN_BYTES 0x26
+#define SAMPLE_RATE_BYTES 0b10000010
+
+#define SEND_INTERVAL ((5 * 1000) / SAMPLE_RATE)
+#define GET_INTERVAL (SEND_INTERVAL / SAMPLE_COUNT)
+
+#define PACKET_SIZE 66
+
+#define CLOCKMHZ 7.68
+#define VREF 2.5
