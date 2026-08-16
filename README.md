@@ -217,10 +217,6 @@ npm run build
 
 There is not yet an automated Python or firmware test suite. When changing the server, verify startup with a writable `data_path` and exercise the relevant input/output service.
 
-## Contributing
-
-Issues and pull requests are welcome. Keep changes focused, avoid committing generated artifacts or local configuration, and describe how server, frontend, and firmware changes were tested.
-
 ## License
 
 NexaSeis is licensed under the [GNU Affero General Public License v3.0](LICENSE).
