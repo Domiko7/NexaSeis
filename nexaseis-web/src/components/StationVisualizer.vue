@@ -110,14 +110,7 @@ const connect = () => {
       const message = JSON.parse(event.data);
       const station = message?.station;
       if (!station || props.stationKey !== `${station.network || ""}.${station.code || ""}.${station.location || ""}` || props.location !== (station.location || "") || props.channel !== (station.channel || "")) return;
-      let signal: unknown[] = [];
-      if (Array.isArray(message.velocity) && message.velocity.length) {
-        signal = message.velocity.map((value: number) => value * 1_000_000);
-      } else if (Array.isArray(message.waveform) && message.waveform.length) {
-        const numericSamples = message.waveform.filter((value: unknown): value is number => typeof value === "number" && Number.isFinite(value));
-        const mean = numericSamples.reduce((sum: number, value: number) => sum + value, 0) / numericSamples.length;
-        signal = numericSamples.map((value: number) => value - mean);
-      }
+      const signal: unknown[] = Array.isArray(message.waveform) ? message.waveform : [];
       const valid = signal.filter((value): value is number => typeof value === "number" && Number.isFinite(value));
       dataBuffer.push(...valid);
       dataBuffer.splice(0, Math.max(0, dataBuffer.length - 18400));

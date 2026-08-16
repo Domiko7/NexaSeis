@@ -48,6 +48,7 @@ export interface WebsocketStation {
   pgv: number;
   pga: number;
   pgd: number;
+  waveform: number[];
   acceleration: number[];
   velocity: number[];
   displacement: number[];
