@@ -82,6 +82,18 @@ onBeforeUnmount(() => window.removeEventListener("popstate", syncViewFromHistory
             FAQ
           </v-btn>
 
+          <v-btn
+            href="https://domiko.dev/blog?tag=NexaSeis"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="station-action"
+            color="primary"
+            size="large"
+            prepend-icon="mdi-newspaper-variant-outline"
+          >
+            Blog
+          </v-btn>
+
           <v-btn class="station-action" color="primary" size="large" prepend-icon="mdi-book-open-page-variant" @click="openDocsView">
             Docs
           </v-btn>
