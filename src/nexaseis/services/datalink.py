@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 from nexaseis.common import get_config, datalink_queue
 
-SAMPLE_RATE = 100
+DEFAULT_SAMPLE_RATE = 100
 
 async def _process_incoming_packet(dali, packet: dict) -> None:
     net = packet["station"]["network"]
@@ -17,12 +17,13 @@ async def _process_incoming_packet(dali, packet: dict) -> None:
     packet_time = datetime.fromtimestamp(packet["timestamp"], tz=timezone.utc)
     waveform = packet["waveform"]
     num_samples = len(waveform)
+    sample_rate = packet["station"].get("sample_rate") or DEFAULT_SAMPLE_RATE
 
     if not num_samples:
         return
 
     msh = simplemseed.MiniseedHeader(
-        net, code, loc, chan, packet_time, num_samples, SAMPLE_RATE
+        net, code, loc, chan, packet_time, num_samples, sample_rate
     )
 
     try:
