@@ -9,5 +9,6 @@ extern WiFiClient tcp;
 
 void reconnect();
 bool ensure_connected();
+bool is_time_synchronized();
 void init_wifi();
 double get_timestamp();

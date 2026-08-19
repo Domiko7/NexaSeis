@@ -6,6 +6,11 @@ WiFiClient tcp;
 
 bool is_wifi_connecting = false; 
 
+void start_time_sync() {
+  Serial.println("Starting NTP synchronization...");
+  configTime(0, 0, NTP_SERVER);
+}
+
 void reconnect() {
   if (WiFi.status() != WL_CONNECTED) {
     if (!is_wifi_connecting) {
@@ -20,6 +25,7 @@ void reconnect() {
   if (is_wifi_connecting) {
     Serial.println("Wi-Fi Reconnected successfully!");
     is_wifi_connecting = false;
+    start_time_sync();
   }
 
   if (TRANSMISSION_PROTOCOL == "TCP" && !tcp.connected()) {
@@ -42,9 +48,7 @@ void reconnect() {
 }
 
 bool ensure_connected() {
-  if (WiFi.status() != WL_CONNECTED || (TRANSMISSION_PROTOCOL == "TCP" && !tcp.connected())) {
-    reconnect();
-  }
+  reconnect();
   
   if (TRANSMISSION_PROTOCOL == "TCP") {
     return tcp.connected();
@@ -71,7 +75,7 @@ void init_wifi() {
     Serial.println("Wi-Fi Connected on Boot!");
     is_wifi_connecting = false;
     
-    configTime(0, 0, NTP_SERVER);
+    start_time_sync();
   } else {
     Serial.println("Wi-Fi Boot connection timed out. Will retry in background.");
     is_wifi_connecting = true; 
@@ -82,6 +86,11 @@ void init_wifi() {
     Serial.println("Attempting initial TCP connection...");
     tcp.connect(SERVER_IP, SERVER_PORT);
   }
+}
+
+bool is_time_synchronized() {
+  constexpr time_t MIN_VALID_EPOCH = 1700000000;
+  return time(nullptr) >= MIN_VALID_EPOCH;
 }
 
 double get_timestamp() {

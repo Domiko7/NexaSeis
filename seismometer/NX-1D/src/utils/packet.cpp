@@ -16,6 +16,15 @@ void send_packet(int32_t* waveform) {
     return;
   }
 
+  if (!is_time_synchronized()) {
+    static unsigned long last_time_warning = 0;
+    if (millis() - last_time_warning >= 5000) {
+      last_time_warning = millis();
+      Serial.println("Skipping send: Waiting for NTP synchronization.");
+    }
+    return;
+  }
+
   WaveformPacket packet;
 
   memset(&packet, 0, sizeof(WaveformPacket));
