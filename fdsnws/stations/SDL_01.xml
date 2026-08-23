@@ -4,18 +4,18 @@
   <Created>2026-06-16T23:56:06Z</Created>
   <Network code="Z9" startDate="2026-06-16T23:56:06Z">
     <Station code="SDL" startDate="2026-06-16T23:56:06Z">
-      <Latitude>52.1676</Latitude>
-      <Longitude>22.2901</Longitude>
-      <Elevation>100</Elevation>
+      <Latitude>52.15315</Latitude>
+      <Longitude>22.244</Longitude>
+      <Elevation>102</Elevation>
       <Site>
         <Name>Siedlce Station</Name>
         <Country>Poland</Country>
       </Site>
       <CreationDate>2026-06-16T23:56:06Z</CreationDate>
       <Channel code="EHZ" locationCode="01" startDate="2026-06-16T23:56:06Z">
-        <Latitude>52.1676</Latitude>
-        <Longitude>22.2901</Longitude>
-        <Elevation>100</Elevation>
+        <Latitude>52.15315</Latitude>
+        <Longitude>22.244</Longitude>
+        <Elevation>102</Elevation>
         <Depth>0</Depth>
         <Azimuth>0</Azimuth>
         <Dip>-90</Dip>

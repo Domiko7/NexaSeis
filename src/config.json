@@ -104,9 +104,9 @@
                 }
             },
             "location": "00",
-            "lat": 52.1676,
-            "lon": 22.2901,
-            "elevation": 100
+            "lat": 52.15315,
+            "lon": 22.244,
+            "elevation": 102
         },
         {
             "name": "Siedlce Station",
@@ -120,9 +120,9 @@
                 }
             },
             "location": "01",
-            "lat": 52.1676,
-            "lon": 22.2901,
-            "elevation": 100
+            "lat": 52.15315,
+            "lon": 22.244,
+            "elevation": 102
         },
         {
             "name": "Mrozy Station - RS1D",
