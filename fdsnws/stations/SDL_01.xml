@@ -12,7 +12,7 @@
         <Country>Poland</Country>
       </Site>
       <CreationDate>2026-06-16T23:56:06Z</CreationDate>
-      <Channel code="EHZ" locationCode="00" startDate="2026-06-16T23:56:06Z">
+      <Channel code="EHZ" locationCode="01" startDate="2026-06-16T23:56:06Z">
         <Latitude>52.1676</Latitude>
         <Longitude>22.2901</Longitude>
         <Elevation>100</Elevation>
