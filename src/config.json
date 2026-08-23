@@ -109,6 +109,22 @@
             "elevation": 100
         },
         {
+            "name": "Siedlce Station",
+            "code": "SDL",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 5408390926,
+                    "sample_rate": 100,
+                    "response": "m/s"
+                }
+            },
+            "location": "01",
+            "lat": 52.1676,
+            "lon": 22.2901,
+            "elevation": 100
+        },
+        {
             "name": "Mrozy Station - RS1D",
             "code": "MRZ",
             "network": "Z9",
