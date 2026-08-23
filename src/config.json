@@ -97,7 +97,7 @@
             "code": "SDL",
             "network": "Z9",
             "channels": {
-                "HHZ": {
+                "HHN": {
                     "sensitivity": 1000000000,
                     "sample_rate": 100,
                     "response": "m/s"
