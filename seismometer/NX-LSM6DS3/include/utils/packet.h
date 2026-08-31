@@ -16,4 +16,4 @@ struct __attribute__((__packed__)) WaveformPacket {
   int32_t waveform[SAMPLE_COUNT];
 };
 
-void send_packet(int32_t* waveform);
+void send_packet(int32_t* waveform, const char* channel);

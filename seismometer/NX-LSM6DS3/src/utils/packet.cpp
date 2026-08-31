@@ -1,15 +1,11 @@
 
-#include "utils/packet.h"
-
 #include <Arduino.h>
-
 #include "utils/wifi.h"
-
-StationInfo station_info = {CODE, NETWORK, CHANNEL, LOCATION};
+#include "utils/packet.h"
 
 uint8_t packet_num = 0;
 
-void send_packet(int32_t* waveform) {
+void send_packet(int32_t* waveform, const char* channel) {
 
   if (!ensure_connected()) {
     Serial.println("Skipping send: Server unreachable.");
@@ -30,6 +26,12 @@ void send_packet(int32_t* waveform) {
   memset(&packet, 0, sizeof(WaveformPacket));
 
   packet.timestamp = get_timestamp();
+
+  StationInfo station_info = {};
+  strncpy(station_info.code, CODE, sizeof(station_info.code) - 1);
+  strncpy(station_info.network, NETWORK, sizeof(station_info.network) - 1);
+  strncpy(station_info.channel, channel, sizeof(station_info.channel) - 1);
+  strncpy(station_info.location, LOCATION, sizeof(station_info.location) - 1);
 
   packet.station_info = station_info;
 

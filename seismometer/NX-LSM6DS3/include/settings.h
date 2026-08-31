@@ -13,17 +13,17 @@
 #define NTP_SERVER "time.google.com"
 #define TRANSMISSION_PROTOCOL "UDP" // can be either TCP or UDP
 
-#define SAMPLE_RATE 100
 #define SAMPLE_COUNT 5
-#define GAIN 64
 
-#define GAIN_BYTES 0x26
-#define SAMPLE_RATE_BYTES 0b10000010
-
-#define SEND_INTERVAL ((5 * 1000) / SAMPLE_RATE)
+#define SEND_INTERVAL ((5 * 1000) / 416)
 #define GET_INTERVAL (SEND_INTERVAL / SAMPLE_COUNT)
 
 #define PACKET_SIZE 66
 
 #define CLOCKMHZ 7.68
 #define VREF 2.5
+
+#define SDA_PIN 21
+#define SCL_PIN 22
+#define LSM6DS3_ADDR 0x6B
+#define LSM6DS3_FIFO_DATA_OUT_L 0x3E
