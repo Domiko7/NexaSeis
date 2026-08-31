@@ -12,7 +12,7 @@ See [How to build a DIY seismometer](https://domiko.dev/blog/diy-seismometer) fo
 | Project | Status | Description |
 | --- | --- | --- |
 | [`NX-1D`](NX-1D/) | Complete | ESP32 and ADS1256 firmware for a one-axis station |
-| [`NX-LSM6DS3`](NX-LSM6DS3/) | Incomplete | Experimental LSM6DS3 firmware and KiCad hardware design |
+| [`NX-LSM6DS3`](NX-LSM6DS3/) | Untested | Experimental LSM6DS3 firmware (104sps not 100sps!!) |
 | [`NX-ADXL355`](NX-ADXL355/) | Incomplete | Early ADXL355 firmware project |
 
 ## NX-1D setup
