@@ -1,6 +1,7 @@
 {
     "organization": "Domiko labs",
     "data_path": "/home/dominik/NexaSeis/src/data",
+    "fdsnws_path": "/home/dominik/NexaSeis/fdsnws",
     "debug": true,
     "stations": [
         {
@@ -155,6 +156,22 @@
             "lat": 40.594594594594597,
             "lon": -3.2390283266332474,
             "elevation": 645
+        },
+        {
+            "name": "San Luis Potosi Station",
+            "code": "SLP2",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 9200000000,
+                    "sample_rate": 100,
+                    "response": "m/s"
+                }
+            },
+            "location": "00",
+            "lat": 21.9983,
+            "lon": -99.6370,
+            "elevation": 1075
         }
     ],
     "api": {
@@ -167,7 +184,7 @@
         "address": "0.0.0.0:50007"
     },
     "seedlink_server": {
-        "enabled": false,
+        "enabled": true,
         "address": "0.0.0.0:18000"
     },
     "datalink_server": {
