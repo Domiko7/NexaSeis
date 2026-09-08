@@ -172,6 +172,22 @@
             "lat": 21.9983,
             "lon": -99.6370,
             "elevation": 1075
+        },
+        {
+            "name": "Miki's Station",
+            "code": "MIKI",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 5408390926,
+                    "sample_rate": 100,
+                    "response": "m/s"
+                }
+            },
+            "location": "00",
+            "lat": 52.7384,
+            "lon": 14.697,
+            "elevation": 46
         }
     ],
     "api": {
