@@ -1,0 +1,42 @@
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1">
+<Source>Github</Source>
+<Sender>Dominik</Sender>
+<Created>2026-09-20T21:56:06Z</Created>
+<Network code="Z9" startDate="2026-09-20T21:56:06Z">
+<Station code="ARRAS" startDate="2026-09-20T21:56:06Z">
+<Latitude>50.277</Latitude>
+<Longitude>2.783</Longitude>
+<Elevation>86</Elevation>
+<Site>
+<Name>Arras Station</Name>
+<Country>France</Country>
+</Site>
+<CreationDate>2026-09-20T21:56:06Z</CreationDate>
+<Channel code="EHZ" startDate="2026-09-20T21:56:06Z" locationCode="00">
+<Latitude>50.277</Latitude>
+<Longitude>2.783</Longitude>
+<Elevation>86</Elevation>
+<Depth>0</Depth>
+<Azimuth>0</Azimuth>
+<Dip>-90</Dip>
+<SampleRate>100</SampleRate>
+<SampleRateRatio>
+<NumberSamples>100</NumberSamples>
+<NumberSeconds>1</NumberSeconds>
+</SampleRateRatio>
+<Response>
+<InstrumentSensitivity>
+<Value>9200000000</Value>
+<Frequency>4.5</Frequency>
+<InputUnits>
+<Name>m/s</Name>
+</InputUnits>
+<OutputUnits>
+  <Name>count</Name>
+</OutputUnits>
+</InstrumentSensitivity>
+</Response>
+</Channel>
+</Station>
+</Network>
+</FDSNStationXML>

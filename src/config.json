@@ -188,6 +188,22 @@
             "lat": 52.7384,
             "lon": 14.697,
             "elevation": 46
+        },
+        {
+            "name": "Arras Station",
+            "code": "ARRAS",
+            "network": "Z9",
+            "channels": {
+                "EHZ": {
+                    "sensitivity": 9200000000,
+                    "sample_rate": 100,
+                    "response": "m/s"
+                }
+            },
+            "location": "00",
+            "lat": 50.277,
+            "lon": 2.783,
+            "elevation": 86
         }
     ],
     "api": {
