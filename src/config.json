@@ -204,6 +204,32 @@
             "lat": 50.277,
             "lon": 2.783,
             "elevation": 86
+        },
+        {
+            "name": "Mizuho Station",
+            "code": "MIZH",
+            "network": "Z9",
+            "channels": {
+                "ENZ": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250,
+                    "response": "m/s**2"
+                },
+                "ENE": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250,
+                    "response": "m/s**2"
+                },
+                "ENN": {
+                    "sensitivity": 1670.7030433430377,
+                    "sample_rate": 250,
+                    "response": "m/s**2"
+                }
+            },
+            "location": "00",
+            "lat": 35.790694,
+            "lon": 139.351028,
+            "elevation": 141
         }
     ],
     "api": {
