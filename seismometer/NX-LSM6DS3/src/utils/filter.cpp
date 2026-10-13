@@ -1,7 +1,12 @@
 #include "utils/filter.h"
 
-int16_t hpf_x = 0, hpf_y = 0, hpf_z = 0;
-int16_t prev_x = 0, prev_y = 0, prev_z = 0;
+float hpf_x = 0.0f;
+float hpf_y = 0.0f;
+float hpf_z = 0.0f;
+
+int16_t prev_x = 0;
+int16_t prev_y = 0;
+int16_t prev_z = 0;
 
 const float ALPHA = 0.993f;
 

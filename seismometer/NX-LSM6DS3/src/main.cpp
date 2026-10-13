@@ -10,10 +10,10 @@
 #include "utils/filter.h"
 #include "utils/serial.h"
 
-int32_t value;
 int32_t waveform_z[SAMPLE_COUNT];
 int32_t waveform_n[SAMPLE_COUNT];
 int32_t waveform_e[SAMPLE_COUNT];
+
 int32_t accum_x = 0;
 int32_t accum_y = 0;
 int32_t accum_z = 0;
@@ -45,10 +45,6 @@ void setup() {
     Serial.println("LSM6DS3 initialized successfully.");
   }
 
-  if (accel.begin() != 0) {
-	  Serial.println("Problem starting the sensor.");
-  }
-
   Serial.println("Configuring FIFO with no error checking...");
   accel.fifoBegin();
   Serial.println("Done!\n");
@@ -56,7 +52,6 @@ void setup() {
   Serial.println("Clearing out the FIFO...");
   accel.fifoClear();
   Serial.println("Done!\n");
-
 }
 
 void loop() {
@@ -84,17 +79,17 @@ void loop() {
       int16_t y = accel.fifoRead();
       int16_t z = accel.fifoRead();
 
-      accum_x += x;
-      accum_y += y;
-      accum_z += z;
+      Axis normalized_packet = normalize(x, y, z);
+
+      accum_x += normalized_packet.x;
+      accum_y += normalized_packet.y;
+      accum_z += normalized_packet.z;
       oversample_count++;
 
       if (oversample_count >= 4) {
-        Axis normalized_packets = normalize(accum_x, accum_y, accum_z);
-
-        waveform_e[count] = normalized_packets.x;
-        waveform_n[count] = normalized_packets.y;
-        waveform_z[count] = normalized_packets.z;
+        waveform_e[count] = accum_x / 4;
+        waveform_n[count] = accum_y / 4;
+        waveform_z[count] = accum_z / 4;
         
         count++;
 
