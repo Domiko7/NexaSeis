@@ -19,9 +19,9 @@
         <Depth>0</Depth>
         <Azimuth>0</Azimuth>
         <Dip>-90</Dip>
-        <SampleRate>250</SampleRate>
+        <SampleRate>104</SampleRate>
         <SampleRateRatio>
-          <NumberSamples>250</NumberSamples>
+          <NumberSamples>104</NumberSamples>
           <NumberSeconds>1</NumberSeconds>
         </SampleRateRatio>
         <Sensor>
@@ -47,9 +47,9 @@
         <Depth>0</Depth>
         <Azimuth>90</Azimuth>
         <Dip>0</Dip>
-        <SampleRate>250</SampleRate>
+        <SampleRate>104</SampleRate>
         <SampleRateRatio>
-          <NumberSamples>250</NumberSamples>
+          <NumberSamples>104</NumberSamples>
           <NumberSeconds>1</NumberSeconds>
         </SampleRateRatio>
         <Sensor>
@@ -75,9 +75,9 @@
         <Depth>0</Depth>
         <Azimuth>0</Azimuth>
         <Dip>0</Dip>
-        <SampleRate>250</SampleRate>
+        <SampleRate>104</SampleRate>
         <SampleRateRatio>
-          <NumberSamples>250</NumberSamples>
+          <NumberSamples>104</NumberSamples>
           <NumberSeconds>1</NumberSeconds>
         </SampleRateRatio>
         <Sensor>

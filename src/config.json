@@ -212,17 +212,17 @@
             "channels": {
                 "ENZ": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250,
+                    "sample_rate": 104,
                     "response": "m/s**2"
                 },
                 "ENE": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250,
+                    "sample_rate": 104,
                     "response": "m/s**2"
                 },
                 "ENN": {
                     "sensitivity": 1670.7030433430377,
-                    "sample_rate": 250,
+                    "sample_rate": 104,
                     "response": "m/s**2"
                 }
             },
