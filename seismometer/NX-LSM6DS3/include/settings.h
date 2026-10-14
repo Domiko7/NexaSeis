@@ -15,7 +15,7 @@
 
 #define SAMPLE_COUNT 5
 
-#define SEND_INTERVAL ((5 * 1000) / 416)
+#define SEND_INTERVAL ((5 * 1000) / 104)
 #define GET_INTERVAL (SEND_INTERVAL / SAMPLE_COUNT)
 
 #define PACKET_SIZE 66
