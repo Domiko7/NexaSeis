@@ -11,13 +11,9 @@
 #define SERVER_IP "YOUR_SERVER_IP"
 #define SERVER_PORT 50006
 #define NTP_SERVER "time.google.com"
-#define TRANSMISSION_PROTOCOL "UDP" // can be either TCP or UDP
+#define TRANSMISSION_PROTOCOL "UDP"
 
 #define SAMPLE_COUNT 5
-
-#define SEND_INTERVAL ((5 * 1000) / 104)
-#define GET_INTERVAL (SEND_INTERVAL / SAMPLE_COUNT)
-
 #define PACKET_SIZE 66
 
 #define CLOCKMHZ 7.68

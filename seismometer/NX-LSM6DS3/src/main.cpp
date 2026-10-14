@@ -6,7 +6,6 @@
 #include "settings.h"
 #include "utils/wifi.h"
 #include "utils/packet.h"
-#include "utils/timer.h"
 #include "utils/filter.h"
 #include "utils/serial.h"
 
@@ -25,7 +24,6 @@ LSM6DS3 accel(I2C_MODE, LSM6DS3_ADDR);
 void setup() {
   Serial.begin(115200);
 
-  init_timer();
   init_wifi();
 
   delay(5000);
@@ -55,56 +53,53 @@ void setup() {
 }
 
 void loop() {
-  if (flag) {
-    portENTER_CRITICAL(&timer_mux);
-    flag = false;
-    portEXIT_CRITICAL(&timer_mux);
+  if (!is_sensor_connected()) {
+    return; 
+  }
 
-    if (!is_sensor_connected()) {
-      return; 
+  uint16_t status = accel.fifoGetStatus();
+
+  if (status == 0xFFFF || status == 0) {
+    return;
+  }
+
+  uint16_t words_available = accel.fifoGetStatus() & 0x0FFF; 
+  uint16_t samples_available = words_available / 3;
+  
+  if (samples_available == 0) {
+    return;
+  }
+
+  for (uint16_t i = 0; i < samples_available && count < SAMPLE_COUNT; i++) {
+    int16_t x = accel.fifoRead();
+    int16_t y = accel.fifoRead();
+    int16_t z = accel.fifoRead();
+
+    Axis normalized_packet = normalize(x, y, z);
+
+    accum_x += normalized_packet.x;
+    accum_y += normalized_packet.y;
+    accum_z += normalized_packet.z;
+    oversample_count++;
+
+    if (oversample_count >= 4) {
+      waveform_e[count] = (float)accum_x * 50.0f / 4.0f;
+      waveform_n[count] = (float)accum_y * 50.0f / 4.0f;
+      waveform_z[count] = (float)accum_z * 50.0f / 4.0f;
+      
+      count++;
+
+      accum_x = 0;
+      accum_y = 0;
+      accum_z = 0;
+      oversample_count = 0;
     }
+  }
 
-    uint16_t status = accel.fifoGetStatus();
-
-    if (status == 0xFFFF || status == 0) {
-      Serial.println("Invalid FIFO status read");
-      return;
-    }
-
-    uint16_t words_available = accel.fifoGetStatus() & 0x0FFF; 
-    uint16_t samples_available = words_available / 3;
-    
-    for (uint16_t i = 0; i < samples_available && count < SAMPLE_COUNT; i++) {
-      int16_t x = accel.fifoRead();
-      int16_t y = accel.fifoRead();
-      int16_t z = accel.fifoRead();
-
-      Axis normalized_packet = normalize(x, y, z);
-
-      accum_x += normalized_packet.x;
-      accum_y += normalized_packet.y;
-      accum_z += normalized_packet.z;
-      oversample_count++;
-
-      if (oversample_count >= 4) {
-        waveform_e[count] = (float)accum_x * 50.0f / 4.0f;
-        waveform_n[count] = (float)accum_y * 50.0f / 4.0f;
-        waveform_z[count] = (float)accum_z * 50.0f / 4.0f;
-        
-        count++;
-
-        accum_x = 0;
-        accum_y = 0;
-        accum_z = 0;
-        oversample_count = 0;
-      }
-    }
-
-    if (count >= SAMPLE_COUNT) {
-      count = 0;
-      send_packet(waveform_z, CHANNEL_Z);
-      send_packet(waveform_n, CHANNEL_N);
-      send_packet(waveform_e, CHANNEL_E);
-    }
+  if (count >= SAMPLE_COUNT) {
+    count = 0;
+    send_packet(waveform_z, CHANNEL_Z);
+    send_packet(waveform_n, CHANNEL_N);
+    send_packet(waveform_e, CHANNEL_E);
   }
 }
