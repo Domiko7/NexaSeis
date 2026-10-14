@@ -211,17 +211,17 @@
             "network": "Z9",
             "channels": {
                 "ENZ": {
-                    "sensitivity": 1670.7030433430377,
+                    "sensitivity": 1044189.432089397,
                     "sample_rate": 104,
                     "response": "m/s**2"
                 },
                 "ENE": {
-                    "sensitivity": 1670.7030433430377,
+                    "sensitivity": 1044189.432089397,
                     "sample_rate": 104,
                     "response": "m/s**2"
                 },
                 "ENN": {
-                    "sensitivity": 1670.7030433430377,
+                    "sensitivity": 1044189.432089397,
                     "sample_rate": 104,
                     "response": "m/s**2"
                 }

@@ -87,9 +87,9 @@ void loop() {
       oversample_count++;
 
       if (oversample_count >= 4) {
-        waveform_e[count] = accum_x / 4;
-        waveform_n[count] = accum_y / 4;
-        waveform_z[count] = accum_z / 4;
+        waveform_e[count] = (float)accum_x * 50.0f / 4.0f;
+        waveform_n[count] = (float)accum_y * 50.0f / 4.0f;
+        waveform_z[count] = (float)accum_z * 50.0f / 4.0f;
         
         count++;
 

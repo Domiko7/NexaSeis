@@ -8,7 +8,7 @@ int16_t prev_x = 0;
 int16_t prev_y = 0;
 int16_t prev_z = 0;
 
-const float ALPHA = 0.993f;
+const float ALPHA = 0.90f;
 
 Axis normalize(int16_t x, int16_t y, int16_t z) {
   hpf_x = ALPHA * (hpf_x + x - prev_x);
@@ -19,5 +19,5 @@ Axis normalize(int16_t x, int16_t y, int16_t z) {
   prev_y = y;
   prev_z = z;
 
-  return {hpf_x, hpf_y, hpf_z};
+  return {hpf_x * 50.0f, hpf_y * 50.0f, hpf_z * 50.0f};
 }

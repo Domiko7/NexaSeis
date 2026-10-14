@@ -29,7 +29,7 @@
         </Sensor>
         <Response>
           <InstrumentSensitivity>
-            <Value>1670.7030433430377</Value>
+            <Value>1044189.432089397</Value>
             <Frequency>1.0</Frequency>
             <InputUnits>
               <Name>m/s**2</Name>
@@ -57,7 +57,7 @@
         </Sensor>
         <Response>
           <InstrumentSensitivity>
-            <Value>1670.7030433430377</Value>
+            <Value>1044189.432089397</Value>
             <Frequency>1.0</Frequency>
             <InputUnits>
               <Name>m/s**2</Name>
@@ -85,7 +85,7 @@
         </Sensor>
         <Response>
           <InstrumentSensitivity>
-            <Value>1670.7030433430377</Value>
+            <Value>1044189.432089397</Value>
             <Frequency>1.0</Frequency>
             <InputUnits>
               <Name>m/s**2</Name>
